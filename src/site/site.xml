@@ -1,0 +1,58 @@
+<project>
+
+    <body>
+        <menu ref="reports" inherit="top"/>
+        <menu ref="modules"/>
+        <menu name="Asciidoctor Example">
+            <item href="hello.html" name="Hello" />
+        </menu>
+    </body>
+
+    <skin>
+      <groupId>lt.velykis.maven.skins</groupId>
+      <artifactId>reflow-maven-skin</artifactId>
+      <version>1.1.1</version>
+    </skin>
+
+    <custom>
+      <reflowSkin>
+        <!-- Figure out how to use bootswatch-paper with custom color scheme. -->
+        <theme>bootswatch-united</theme>
+        <highlightJs>true</highlightJs>
+        <brand>
+          <name>My Project</name>
+          <href>http://github.com/tonydamage/maven-site-bootstrap</href>
+        </brand>
+        <slogan>Super interesting project doing good things.</slogan>
+        <titleTemplate>%2$s | %1$s</titleTemplate>
+        <toc>top</toc>
+        <topNav>Download|reports</topNav>
+        <bottomNav>
+          <column>Main|Download</column>
+          <column>Documentation</column>
+          <column>reports|modules</column>
+        </bottomNav>
+        <bottomDescription>
+          This is a very good project doing interesting and valuable things.
+        </bottomDescription>
+        <pages>
+          <index project="project-id">
+            <shortTitle>Welcome</shortTitle>
+            <breadcrumbs>false</breadcrumbs>
+            <toc>false</toc>
+            <sections>
+              <carousel />
+              <body />
+              <sidebar />
+              <thumbs>2</thumbs>
+              <columns>3</columns>
+            </sections>
+          </index>
+          <developer-info>
+            <toc>sidebar</toc>
+          </developer-info>
+        </pages>
+      </reflowSkin>
+  </custom>
+
+</project>
